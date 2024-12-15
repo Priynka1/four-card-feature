@@ -1,0 +1,277 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#card-container {
+  position: relative;
+  border: 1px solid red;
+  border-style: none;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+#header-div {
+  width: 35%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.font-size {
+  font-size: 1.5em;
+  color: hsl(229, 6%, 66%);
+}
+
+.small-para {
+  font-size: 0.8em;
+  font-size: bold;
+  color: hsl(229, 6%, 66%);
+}
+
+.div-para {
+  font-size: 0.7em;
+  margin-top: 10px;
+  color: hsl(229, 6%, 66%);
+}
+
+img {
+  width: 15%;
+  margin-left: 10em;
+  margin-top: 2em;
+}
+
+#box-div {
+  border: 1px solid green;
+  border-style: none;
+  width: 70%;
+  height: auto;
+  /* position: relative; */
+  margin: 2em auto;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 60px 170px 90px;
+gap: 25px;
+
+}
+#supervisor-div {
+  /* position: absolute; */
+  width: 100%;
+  padding: 1em;
+  /* margin-top: 5em;
+  margin-left: 6em; */
+  text-align: start;
+  border-top: 2px solid hsl(180, 62%, 55%);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px hsl(229, 6%, 66%);
+grid-row-start:2 ;
+grid-row-end: 3;
+
+}
+.team-karma-div{
+  grid-column-start: 2;
+  
+}
+
+
+.team-div {
+  /* position: absolute; */
+  width: 100%;
+  padding: 1em;
+  /* margin-top: 2em; */
+  /* margin-left: 22em; */
+  text-align: start;
+  border-top: 2px solid hsl(0, 78%, 62%);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px hsl(229, 6%, 66%);
+
+}
+
+.karma-div {
+  /* position: absolute; */
+  width: 100%;
+  padding: 1em;
+  text-align: start;
+  margin-top: 1.5em;
+  /* margin-left: 22em;  */
+  border-top: 2px solid hsl(34, 97%, 64%);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px hsl(229, 6%, 66%);
+ 
+
+}
+
+#calculator-div {
+  /* position: absolute; */
+  width: 100%;
+  padding: 1em;
+  /* margin-left: 38em;
+  margin-top: 5em; */
+  text-align: start;
+  border-top: 2px solid hsl(212, 86%, 64%);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px 0px hsl(229, 6%, 66%);
+grid-column-start:3 ;
+  grid-row-start: 2;
+grid-row-end: 3;
+
+
+}
+@media screen and (max-width:431px){
+  #card-container {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+  }
+
+  #header-div {
+    width: 95%;
+    margin: 0 auto;
+  }
+.div-para{
+  font-size: 0.9em;
+}
+img{
+  margin-left: 70%;
+}
+  #supervisor-div {
+    margin-top: 2em;
+    height: 13em;
+
+  }
+
+  .team-div {
+    margin-top: 2em;
+    height: 13em;
+  }
+
+  #box-div {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2em;
+  }
+
+  .karma-div {
+   margin-top: 2em;
+   height: 13em;
+  }
+
+  #calculator-div {
+    margin-top: 2em;
+    height: 13em;
+  }
+}
+
+@media screen and (max-width:375px) {
+
+  #card-container {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+
+  }
+
+  #header-div {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #supervisor-div {
+    margin-top: 2em;
+
+  }
+
+  .team-div {
+    margin-top: 2em;
+  }
+
+  #box-div {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 2em;
+  }
+
+  .karma-div {
+   margin-top: 2em;
+  }
+
+  #calculator-div {
+    margin-top: 2em;
+  }
+}
